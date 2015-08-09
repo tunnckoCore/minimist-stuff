@@ -11,7 +11,8 @@ var cli = lib.plugins(events, {
   alias: {
     s: 'set'
   },
-  foo: 'bar'
+  foo: 'bar',
+  help: true
 })
 
 cli
@@ -33,6 +34,10 @@ cli
     console.log('plugin position:', this.pluginIndex)
   })
 
+// shows `usage help`
+// node examples/plugins-events.js
+// node examples/plugins-events.js -h
+// node examples/plugins-events.js --help
 cli(process.argv.slice(2), {
   alias: {
     g: 'global'
@@ -40,4 +45,4 @@ cli(process.argv.slice(2), {
   qux: 'charlike'
 })
 
-console.log(cli)
+// console.log(cli)

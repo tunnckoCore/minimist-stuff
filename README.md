@@ -1,22 +1,26 @@
-# [minimist-stuff][author-www-url] [![npmjs.com][npmjs-img]][npmjs-url] [![The MIT License][license-img]][license-url] 
+# minimist-stuff
 
 > just minimist and `minimist-*` stuff
 
-[![code climate][codeclimate-img]][codeclimate-url] [![standard code style][standard-img]][standard-url] [![travis build status][travis-img]][travis-url] [![coverage status][coveralls-img]][coveralls-url] [![dependency status][david-img]][david-url]
-
-
-## Install
-```
-npm i minimist-stuff --save
-npm test
-```
-
+## Stuff
+- `minimist-plugins` in `lib/plugins.js`
+- `minimist-events` in `lib/events.js`
+- `minimist-expand` in `lib/expand.js`
+- `minimist-methods` in `lib/methods.js`
+- same convention for `examples/`
 
 ## Usage
 > For more use-cases see the [tests](./test.js)
 
 ```js
-var minimistStuff = require('minimist-stuff')
+var lib = require('minimist-stuff')
+
+console.log(lib)
+// lib.plugins
+// lib.events
+// lib.expand
+// lib.methods
+// lib.utils
 ```
 
 

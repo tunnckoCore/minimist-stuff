@@ -3,7 +3,6 @@
 'use strict'
 
 var lib = require('../index')
-var assert = require('assert')
 var minimist = require('minimist')
 
 var cli = lib.plugins(minimist)

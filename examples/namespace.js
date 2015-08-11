@@ -8,28 +8,21 @@ var two = new App()
 
 var lib = require('../index')
 var minimist = require('minimist')
-var expand = lib.expand(minimist, {help: true})
-var cli = lib.namespace(expand, {
+var cli = lib.namespace(lib.expand(minimist), {
+  toBoolean: true,
   namespace: {
     one: one
   }
 })
 
 cli
-  .on('help', function usage (self, opts) {
-    console.log('usage help')
-  })
-  .on('h', function (val) {
-    this.emit('help', this, this.options)
-  })
+  .on('set', console.log.bind(console, '[set]'))
   .on('one.set', console.log.bind(console, '[one.set]'))
   .on('two.set', console.log.bind(console, '[two.set]'))
 
 // node examples/namespace.js --one.set=foo:bar --one.set=baz:qux
 // node examples/namespace.js --two.set=a:b --one.set=foo:bar
-// node examples/namespace.js --help
-// node examples/namespace.js -h
-// node examples/namespace.js
+// node examples/namespace.js --two.set=a:b --one.set=foo:bar --set=c:d
 cli(process.argv.slice(2), {
   namespace: {
     two: two

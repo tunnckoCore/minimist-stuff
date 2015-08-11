@@ -28,6 +28,9 @@ cli
 
 // node examples/namespace.js --one.set=foo:bar --one.set=baz:qux
 // node examples/namespace.js --two.set=a:b --one.set=foo:bar
+// node examples/namespace.js --help
+// node examples/namespace.js -h
+// node examples/namespace.js
 cli(process.argv.slice(2), {
   namespace: {
     two: two

@@ -36,3 +36,8 @@ cli(process.argv.slice(2), {
     two: two
   }
 })
+
+console.log('=====')
+console.log('cli.argv', cli.argv)
+console.log('one.cache', one.cache)
+console.log('two.cache', two.cache)

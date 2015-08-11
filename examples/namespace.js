@@ -9,8 +9,7 @@ var two = new App()
 var lib = require('../index')
 var minimist = require('minimist')
 var expand = lib.expand(minimist, {help: true})
-var events = lib.events(expand, {toBoolean: true, help: true})
-var cli = lib.namespace(events, {
+var cli = lib.namespace(expand, {
   namespace: {
     one: one
   }
